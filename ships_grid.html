@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Identificar naves de la lámina</title>
+<style>
+  body{margin:0;background:#070d16;color:#e8f1f8;font-family:"Segoe UI",sans-serif;text-align:center;padding:24px}
+  h1{color:#00e5c7;font-size:24px}
+  p{color:#8fa3b5;max-width:700px;margin:0 auto 20px}
+  .board{position:relative;width:min(90vw,700px);margin:0 auto;aspect-ratio:1/1;border:2px solid #00e5c7}
+  .board img{width:100%;height:100%;object-fit:contain;background:#808080}
+  .grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);pointer-events:none}
+  .cell{border:1px dashed rgba(0,229,199,.6);display:flex;align-items:flex-start;justify-content:flex-start}
+  .cell b{background:#00e5c7;color:#04121a;font-size:20px;width:34px;height:34px;display:grid;place-items:center;border-radius:0 0 8px 0}
+  .list{max-width:700px;margin:26px auto;text-align:left;background:#111c2b;border:1px solid #00e5c733;border-radius:12px;padding:18px}
+  .list h2{color:#f0b429;font-size:16px;margin:0 0 10px}
+  .list code{color:#00e5c7}
+</style>
+</head>
+<body>
+<h1>🛸 Identifica cada nave</h1>
+<p>Abre tu lámina con esta cuadrícula encima. Dime qué nave hay en cada número
+   (por ejemplo: <b>1 = Viper, 2 = Specter, 3 = Tulpar...</b>) y yo las separo,
+   les quito el fondo y las guardo con su nombre.</p>
+
+<div class="board">
+  <img src="ships/nave_origen.webp" alt="Lámina de naves">
+  <div class="grid">
+    <div class="cell"><b>1</b></div><div class="cell"><b>2</b></div><div class="cell"><b>3</b></div>
+    <div class="cell"><b>4</b></div><div class="cell"><b>5</b></div><div class="cell"><b>6</b></div>
+    <div class="cell"><b>7</b></div><div class="cell"><b>8</b></div><div class="cell"><b>9</b></div>
+  </div>
+</div>
+
+<div class="list">
+  <h2>Nombres que espera el programa</h2>
+  <code>viper · specter · tulpar · obliterator · reaper · behemoth · nova · prometheus · tulparprime</code>
+</div>
+</body>
+</html>
